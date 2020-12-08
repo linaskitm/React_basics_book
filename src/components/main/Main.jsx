@@ -1,12 +1,13 @@
 import React from 'react'
 import BookList from '../bookList/BookList'
+import Contact from '../contact/Contact'
 
 
 const Main = () => {
     return (
         <div>
-            <p>Esu Main page </p>
             <BookList/>
+            <Contact name="Linas" email="lpelenis@yahoo.com" initialAle={29}/>
         </div>
     )
 }
