@@ -7,10 +7,9 @@ class Contact extends Component {
     constructor(props) {
         super();
         this.state = {
-            age: props.initialAle,
-            counter: 0
+            age: props.initialAge
         }
-        this.handleClick = this.handleClick.bind(this)
+        
     }
     makeOlder() {
         this.setState({
@@ -19,12 +18,7 @@ class Contact extends Component {
         console.log(this.state.age)
     }
 
-    handleClick() {
-        this.setState(prevState => {
-            return {counter: prevState.counter +1}
-            
-        })
-    }
+  
     render() {
         return (
             <div className="contact-card">
@@ -32,8 +26,6 @@ class Contact extends Component {
              <p>Email: {this.props.email}</p>
              <p>Amzius: {this.state.age}</p>
              <button className="btn btn-primary" onClick={this.makeOlder.bind(this)}>Click</button>
-             <p>Like: {this.state.counter}</p>
-             <a onClick={this.handleClick} href="#">Like</a>
          </div>
 
             
